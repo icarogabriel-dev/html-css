@@ -4,50 +4,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 :root {
+    --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
     --fonte-header: "Passion One", sans-serif;
-    --fonte-geral: "Sriracha", cursive;
+    --fonte-section: "Sriracha", cursive;
 }
 
 * {
     margin: 0;
     padding: 0;
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
+    font-family: var(--fonte-padrao);
 }
 
 header {
-    text-align: center;
-    padding: 85px;
     background-color: black;
     color: white;
-    font-family: var(--fonte-header);
+    text-align: center;
 }
 
 header > h1 {
-    font-size: 5.5em;
-    font-weight: bold;
+    font-family: var(--fonte-header);
+    padding-top: 65px;
+    font-variant: small-caps;
+    font-size: 11.5vh;
 }
 
 header > p {
-    font-size: 1.5em;
+    padding-bottom: 65px;
+    font-size: 1.1em;
 }
 
-strong > a {
-    text-decoration: none;
+p > a {
     color: white;
-    font-weight: bold;
+    text-decoration: none;
 }
 
-strong > a:hover {
-    text-decoration: underline;
+p > a:hover {
+    text-decoration: underline
 }
 
-main {
-    font-family: var(--fonte-geral);
-    padding: 2px;
-    margin: 20px;
-    text-align: justify;
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte-section);
+    font-size: 4vh;
 }
 
-article > p {
-    font-size: 2.3em;
-    
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(63, 63, 63);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.315);
+    background-size: cover;
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 6px;
+    background-color: rgba(0, 0, 0, 0.466);
+    text-shadow: 1.5px 1.5px 0px black;
+}
+
+section#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;  
+}
+
+section#img02 {
+    background-image: url(imagens/background002.jpg);
+    background-position: right center;
+}
+
+footer > p {
+    padding: 6px;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
